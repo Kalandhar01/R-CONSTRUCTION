@@ -1,7 +1,7 @@
 "use client";
 
 import type { PortfolioProject } from "@/lib/portfolio-data";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +13,8 @@ export default function WorksGallery({
 }) {
   if (!projects.length) {
     return (
-      <div className="border border-slate-200 bg-slate-50 px-6 py-14 text-center">
-        <p className="text-sm font-medium text-slate-600">
+      <div className="rounded-xl border border-slate-200 bg-slate-50 px-6 py-16 text-center">
+        <p className="text-sm font-medium text-slate-500">
           No projects are available yet.
         </p>
       </div>
@@ -22,7 +22,7 @@ export default function WorksGallery({
   }
 
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
         <motion.div
           key={project.id}
@@ -33,37 +33,43 @@ export default function WorksGallery({
             delay: Math.min(index % 6, 5) * 0.045,
             ease: [0.22, 1, 0.36, 1],
           }}
+          className="flex"
         >
           <Link
             href={`/works/${project.slug}`}
-            className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(127,29,29,0.12)]"
+            className="group flex w-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(185,28,28,0.14)]"
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-slate-950">
+            <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
               <Image
                 src={project.coverImage}
-                alt={`${project.title} by Ractysh Infra Pvt Ltd`}
+                alt={`${project.title} — Ractysh Infra Pvt Ltd`}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                quality={55}
+                quality={60}
                 className="object-cover transition duration-700 group-hover:scale-105"
               />
-            </div>
-            <div className="flex items-start justify-between gap-4 p-5">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-red-700">
-                  {project.category}
-                </p>
-                <h2 className="mt-2 text-2xl font-bold leading-tight tracking-tight text-slate-950">
-                  {project.title}
-                </h2>
-                <p className="mt-1 text-sm text-slate-500">
-                  {project.location}
-                </p>
-                <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">
-                  {project.description}
-                </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute left-3 top-3 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
+                {project.category}
               </div>
-              <ArrowUpRight className="mt-2 h-5 w-5 shrink-0 text-slate-300 transition duration-300 group-hover:text-red-700" />
+            </div>
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="text-lg font-bold leading-tight tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-red-700">
+                {project.title}
+              </h3>
+              <p className="mt-1 inline-flex items-center gap-1 text-xs text-slate-400">
+                <MapPin className="h-3 w-3 shrink-0" />
+                {project.location}
+              </p>
+              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">
+                {project.description}
+              </p>
+              <div className="mt-auto pt-4">
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-red-700 transition-all duration-300 group-hover:gap-2.5">
+                  View Project
+                  <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
+              </div>
             </div>
           </Link>
         </motion.div>

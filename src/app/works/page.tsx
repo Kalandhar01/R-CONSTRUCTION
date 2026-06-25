@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Works | Ractysh Infra Pvt Ltd",
   description:
-    "Explore our portfolio of architecture, construction, real estate, and digital projects across Tamil Nadu.",
+    "Explore our portfolio of premium exterior construction projects across Tamil Nadu.",
 };
 
 export default function WorksPage() {
@@ -38,8 +38,7 @@ export default function WorksPage() {
               </h1>
             </div>
             <p className="max-w-md text-sm leading-7 text-slate-600">
-              A curated collection of our finest projects across architecture,
-              construction, real estate, and digital services.
+              A curated collection of our finest exterior projects across Tamil Nadu.
             </p>
           </div>
 

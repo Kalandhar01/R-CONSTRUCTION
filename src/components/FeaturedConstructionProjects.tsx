@@ -31,8 +31,7 @@ export default function FeaturedConstructionProjects({
             Featured Projects
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
-            A selection of our finest work across architecture, construction,
-            real estate, and digital services.
+            A selection of our finest exterior projects across Tamil Nadu.
           </p>
         </div>
 
