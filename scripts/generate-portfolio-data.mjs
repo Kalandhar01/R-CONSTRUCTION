@@ -53,11 +53,16 @@ function slugify(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-const entries = fs.readdirSync(WORKS_DIR, { withFileTypes: true });
-const folders = entries
-  .filter((e) => e.isDirectory())
-  .map((e) => e.name)
-  .sort();
+let folders = [];
+try {
+  const entries = fs.readdirSync(WORKS_DIR, { withFileTypes: true });
+  folders = entries
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort();
+} catch {
+  console.warn(`[portfolio-data] Directory not found: ${WORKS_DIR}. Generating empty portfolio.`);
+}
 
 const projects = [];
 
