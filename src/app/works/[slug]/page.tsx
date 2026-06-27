@@ -4,15 +4,12 @@ import Image from "next/image";
 import { ArrowLeft, MapPin } from "lucide-react";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import ConstructionFooter from "@/components/ConstructionFooter";
-import {
-  getProjectBySlug,
-  getRelatedProjects,
-} from "@/lib/portfolio-data";
+import { getProjectBySlug, getProjectsByDivision } from "@/lib/our-works";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
-  const { getAllProjects } = await import("@/lib/portfolio-data");
-  return getAllProjects().map((p) => ({ slug: p.slug }));
+  const projects = await getProjectsByDivision("Construction");
+  return projects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -21,14 +18,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlug(slug);
   if (!project) return { title: "Project Not Found | Ractysh Infra" };
 
   return {
     title: `${project.title} | Ractysh Infra Pvt Ltd`,
     description: project.description,
     openGraph: {
-      title: `${project.title} — ${project.category}`,
+      title: `${project.title} — ${project.division}`,
       description: project.description,
       images: project.coverImage
         ? [{ url: project.coverImage }]
@@ -43,10 +40,11 @@ export default async function ProjectDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
-  const related = getRelatedProjects(project.slug, 3);
+  const allProjects = await getProjectsByDivision("Construction");
+  const related = allProjects.filter((p) => p.slug !== slug).slice(0, 3);
   const gallery = project.galleryImages.slice(1);
 
   return (
@@ -78,7 +76,7 @@ export default async function ProjectDetailPage({
             <div>
               <div className="mb-4 flex flex-wrap items-center gap-3">
                 <span className="rounded-full border border-red-200 bg-red-50 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-red-800">
-                  {project.category}
+                  Construction
                 </span>
               </div>
               <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -156,7 +154,7 @@ export default async function ProjectDetailPage({
                     </div>
                     <div className="p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-red-700">
-                        {item.category}
+                        Construction
                       </p>
                       <h3 className="mt-1 text-xl font-bold leading-tight tracking-tight text-slate-950">
                         {item.title}

@@ -1,15 +1,14 @@
 "use client";
 
-import type { PortfolioProject } from "@/lib/portfolio-data";
+import type { OurWorkProject } from "@/lib/our-works";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function WorksGallery({
   projects,
 }: {
-  projects: PortfolioProject[];
+  projects: OurWorkProject[];
 }) {
   if (!projects.length) {
     return (
@@ -40,17 +39,14 @@ export default function WorksGallery({
             className="group flex w-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(185,28,28,0.14)]"
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-              <Image
+              <img
                 src={project.coverImage}
                 alt={`${project.title} — Ractysh Infra Pvt Ltd`}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                quality={60}
-                className="object-cover transition duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="absolute left-3 top-3 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
-                {project.category}
+                Construction
               </div>
             </div>
             <div className="flex flex-1 flex-col p-5">

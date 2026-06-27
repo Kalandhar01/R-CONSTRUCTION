@@ -1,7 +1,7 @@
 import ConstructionFooter from "@/components/ConstructionFooter";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import WorksGallery from "@/components/WorksGallery";
-import { getAllProjects } from "@/lib/portfolio-data";
+import { getProjectsByDivision } from "@/lib/our-works";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     "Explore our portfolio of premium exterior construction projects across Tamil Nadu.",
 };
 
-export default function WorksPage() {
-  const projects = getAllProjects();
+export default async function WorksPage() {
+  const projects = await getProjectsByDivision("Construction");
 
   return (
     <main className="min-h-screen bg-white text-slate-950">

@@ -51,7 +51,7 @@ export default function WobbleCardDemo() {
               </p>
             </div>
             <Image
-              src="/images/construction/our-work-commercial-complex-site-01.webp"
+              src="/images/our-works/Construction/2.webp"
               width={500}
               height={500}
               alt="Ractysh construction team on site"
@@ -98,7 +98,7 @@ export default function WobbleCardDemo() {
               </p>
             </div>
             <Image
-              src="/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp"
+              src="/images/our-works/Construction/3.webp"
               width={500}
               height={500}
               alt="Ractysh infrastructure project reach"

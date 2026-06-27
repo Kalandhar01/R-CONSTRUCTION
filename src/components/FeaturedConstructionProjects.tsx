@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import type { PortfolioProject } from "@/lib/portfolio-data";
+import type { OurWorkProject } from "@/lib/our-works";
 
 export default function FeaturedConstructionProjects({
   projects,
 }: {
-  projects: PortfolioProject[];
+  projects: OurWorkProject[];
 }) {
   if (!projects.length) return null;
 
@@ -53,7 +53,7 @@ export default function FeaturedConstructionProjects({
               </div>
               <div className="p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-red-400">
-                  {project.category}
+                  Construction
                 </p>
                 <h3 className="mt-1 text-2xl font-bold leading-tight tracking-tight text-white">
                   {project.title}

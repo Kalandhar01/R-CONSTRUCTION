@@ -1,14 +1,14 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import {
   Building2,
   ClipboardCheck,
 } from "lucide-react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { useId, type ReactNode } from "react";
 
-const dashboardImage = "https://assets.aceternity.com/pro/dashboard.webp";
+const dashboardImage = "/images/our-works/Construction/17.webp";
 
 export default function SymmetricBentoGrid() {
   return (
@@ -274,11 +274,11 @@ function DashboardPanel() {
   return (
     <div className="relative h-full w-full overflow-hidden">
       <div className="mt-2 ml-6 h-full w-full rounded-lg border border-neutral-200 bg-neutral-100 p-4 dark:border-neutral-700 dark:bg-neutral-800">
-        <img
+        <Image
           src={dashboardImage}
           alt="Project command dashboard"
-          width="500"
-          height="500"
+          width={500}
+          height={500}
           className="w-full rounded-lg object-cover"
         />
       </div>

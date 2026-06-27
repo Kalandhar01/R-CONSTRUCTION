@@ -13,6 +13,12 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/webp"],
     qualities: [48, 55, 70, 75, 80, 85, 90],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   },
 };
 
