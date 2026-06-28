@@ -28,7 +28,7 @@ export default function HeroSection() {
     >
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
         <Image
-          src="/images/our-works/Construction/1.webp"
+          src="/images/construction/our-work-premium-tower-dawn-04.webp"
           alt="Ractysh Infra construction and infrastructure project"
           fill
           className="object-cover brightness-[0.3] saturate-[0.9]"

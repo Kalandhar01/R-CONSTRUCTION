@@ -8,7 +8,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { useId, type ReactNode } from "react";
 
-const dashboardImage = "/images/our-works/Construction/17.webp";
+const dashboardImage = "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp";
 
 export default function SymmetricBentoGrid() {
   return (

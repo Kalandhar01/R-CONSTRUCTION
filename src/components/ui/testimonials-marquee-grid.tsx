@@ -17,56 +17,56 @@ const testimonials: Testimonial[] = [
       "Ractysh gave our project a single rhythm. Approvals, vendor calls, drawing changes, and site movement finally stopped living in separate conversations.",
     name: "Arun Prakash",
     role: "Commercial Developer",
-    image: "/images/our-works/Construction/5.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
   },
   {
     quote:
       "The updates were owner-friendly without losing site detail. We could see what was approved, what was blocked, and what needed a decision.",
     name: "Meera Nandakumar",
     role: "Project Investor",
-    image: "/images/our-works/Construction/7.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
   },
   {
     quote:
       "Material movement, quality evidence, and handover risks were visible early, before they became expensive surprises.",
     name: "R. Karthik",
     role: "Operations Lead",
-    image: "/images/our-works/Construction/9.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
   },
   {
     quote:
       "Contractor coordination felt calmer. Every escalation came with ownership, timing, and a clear next action.",
     name: "Fathima Noor",
     role: "Hospitality Owner",
-    image: "/images/our-works/Construction/11.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
   },
   {
     quote:
       "The closeout did not feel like a rush. Snags, documents, and readiness were tracked with the same seriousness as construction.",
     name: "Vikram S",
     role: "Facility Director",
-    image: "/images/our-works/Construction/13.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
   },
   {
     quote:
       "For a multi-part infrastructure scope, Ractysh became the coordination layer between noise and measurable progress.",
     name: "Sanjay Iyer",
     role: "Infrastructure Consultant",
-    image: "/images/our-works/Construction/14.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
   },
   {
     quote:
       "Weekly lookaheads became shorter and sharper because the blockers, decisions, and site priorities were already mapped.",
     name: "Leela Menon",
     role: "Client Representative",
-    image: "/images/our-works/Construction/15.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
   },
   {
     quote:
       "Execution stayed measured even when vendor timelines shifted. The project still had one accountable control room.",
     name: "Naveen Raj",
     role: "Procurement Partner",
-    image: "/images/our-works/Construction/16.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
   },
 ];
 
