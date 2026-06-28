@@ -2,8 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
+import { useRef, useState, useEffect } from "react";
+
+const HERO_IMAGES = [
+  "/images/construction/our-work-premium-tower-dawn-04.webp",
+  "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
+  "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
+  "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
+  "/images/construction/our-work-finished-villa-08.webp",
+];
 
 const trustIndicators = [
   "Government Projects",
@@ -14,11 +22,20 @@ const trustIndicators = [
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -27,17 +44,28 @@ export default function HeroSection() {
       className="relative isolate min-h-screen overflow-hidden bg-black"
     >
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
-        <Image
-          src="/images/construction/our-work-premium-tower-dawn-04.webp"
-          alt="Ractysh Infra construction and infrastructure project"
-          fill
-          className="object-cover brightness-[0.3] saturate-[0.9]"
-          sizes="100vw"
-          priority
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={HERO_IMAGES[currentIndex]}
+              alt="Ractysh Infra construction and infrastructure project"
+              fill
+              className="object-cover brightness-[0.55] saturate-[0.9]"
+              sizes="100vw"
+              priority
+              quality={90}
+            />
+          </motion.div>
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
       </motion.div>
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-6 py-32 sm:px-10 lg:px-16">
