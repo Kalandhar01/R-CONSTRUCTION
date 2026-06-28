@@ -13,8 +13,6 @@ const footerColumns = [
       { title: "Projects", href: "/works" },
       { title: "Consultation", href: "#contact" },
       { title: "Careers", href: "#contact" },
-      { title: "Privacy Policy", href: "/privacy-policy" },
-      { title: "Terms & Conditions", href: "/privacy-policy" },
     ],
   },
   {
@@ -45,6 +43,15 @@ const footerColumns = [
       { title: "Start a project", href: "#contact" },
       { title: "Book consultation", href: "#contact" },
       { title: "View project work", href: "/works" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { title: "Privacy Policy", href: "/privacy-policy" },
+      { title: "Terms & Conditions", href: "/terms-and-conditions" },
+      { title: "Cookie Policy", href: "/cookie-policy" },
+      { title: "Disclaimer", href: "/disclaimer" },
     ],
   },
 ];
@@ -97,7 +104,7 @@ export default function ConstructionFooter() {
           </div>
         </div>
 
-        <div className="relative z-10 grid w-full grid-cols-2 items-start gap-10 sm:w-auto sm:shrink-0 lg:grid-cols-4">
+        <div className="relative z-10 grid w-full grid-cols-2 items-start gap-10 sm:w-auto sm:shrink-0 lg:grid-cols-5">
           {footerColumns.map((column) => (
             <div
               key={column.title}
