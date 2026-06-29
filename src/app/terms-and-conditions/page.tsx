@@ -2,12 +2,9 @@ import ConstructionFooter from "@/components/ConstructionFooter";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Ractysh Infra Pvt Ltd",
-  description:
-    "Review the Terms & Conditions of Ractysh Infra Pvt Ltd governing the use of our website and services.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/terms-and-conditions"]);
 
 const sections = [
   {

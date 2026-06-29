@@ -4,8 +4,10 @@ import Image from "next/image";
 import { ArrowLeft, MapPin } from "lucide-react";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import ConstructionFooter from "@/components/ConstructionFooter";
+import JsonLd from "@/components/JsonLd";
 import { getProjectBySlug, getProjectsByDivision } from "@/lib/our-works";
 import type { Metadata } from "next";
+import { SITE_URL, COMPANY_NAME } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const projects = await getProjectsByDivision("Construction");
@@ -23,13 +25,31 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} | Ractysh Infra Pvt Ltd`,
-    description: project.description,
+    description: project.shortDescription || project.description,
+    alternates: {
+      canonical: `${SITE_URL}/works/${slug}`,
+    },
     openGraph: {
-      title: `${project.title} — ${project.division}`,
-      description: project.description,
+      title: `${project.title} — ${COMPANY_NAME}`,
+      description: project.shortDescription || project.description,
+      url: `${SITE_URL}/works/${slug}`,
+      type: "article",
       images: project.coverImage
-        ? [{ url: project.coverImage }]
+        ? [
+            {
+              url: project.coverImage,
+              width: 1200,
+              height: 630,
+              alt: project.title,
+            },
+          ]
         : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — ${COMPANY_NAME}`,
+      description: project.shortDescription || project.description,
+      images: project.coverImage ? [project.coverImage] : [],
     },
   };
 }
@@ -47,8 +67,28 @@ export default async function ProjectDetailPage({
   const related = allProjects.filter((p) => p.slug !== slug).slice(0, 3);
   const gallery = project.galleryImages.slice(1);
 
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: project.title,
+    description: project.shortDescription || project.description,
+    image: project.coverImage,
+    author: {
+      "@type": "Organization",
+      name: COMPANY_NAME,
+    },
+    url: `${SITE_URL}/works/${slug}`,
+    datePublished: project.createdAt?.toISOString?.() || new Date().toISOString(),
+    dateModified: project.updatedAt?.toISOString?.() || new Date().toISOString(),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/works/${slug}`,
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white text-slate-950">
+      <JsonLd schema={projectSchema} />
       <ConstructionNavbar />
 
       <section className="px-5 pb-20 pt-32 sm:px-8 lg:px-16">

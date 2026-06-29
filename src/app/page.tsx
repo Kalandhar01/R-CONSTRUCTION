@@ -5,6 +5,8 @@ import ContactSectionWithShader from "@/components/ContactSectionWithShader";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import HeroParallaxDemo from "@/components/hero-parallax-demo";
+import { SITE_URL, COMPANY_NAME } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 
 import GridBackground from "@/components/ui/grid-background";
 import MotionReveal from "@/components/MotionReveal";
@@ -14,8 +16,77 @@ import TestimonialsMarqueeGrid from "@/components/ui/testimonials-marquee-grid";
 import WobbleCardDemo from "@/components/wobble-card-demo";
 
 export default function Home() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE_URL}/#business`,
+    name: COMPANY_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/brand/ractysh-logo.png`,
+    email: "ractyshinfrapvtltd@gmail.com",
+    description:
+      "Premium construction and infrastructure development company based in Tamil Nadu, India providing civil engineering, construction, infrastructure, and labour contracting services.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+    telephone: "",
+    priceRange: "₹₹₹",
+    image: `${SITE_URL}/images/construction/our-work-premium-tower-dawn-04.webp`,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Construction Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Civil Engineering & Consultation",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Residential Construction",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Construction",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Infrastructure Development",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Labour Contracting",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Government Tender Execution",
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white text-slate-950">
+      <JsonLd schema={localBusinessSchema} />
       <ConstructionNavbar />
       <SubscribeCharm />
       <HeroSection />

@@ -8,6 +8,23 @@ export const metadata: Metadata = {
   title: "Our Works | Ractysh Infra Pvt Ltd",
   description:
     "Explore our portfolio of premium exterior construction projects across Tamil Nadu.",
+  alternates: {
+    canonical: "https://construction.ractysh.com/works",
+  },
+  openGraph: {
+    title: "Our Works — Portfolio | Ractysh Infra Pvt Ltd",
+    description:
+      "Explore our portfolio of premium exterior construction projects across Tamil Nadu.",
+    url: "https://construction.ractysh.com/works",
+    images: [
+      {
+        url: "/images/construction/our-work-premium-tower-dawn-04.webp",
+        width: 1200,
+        height: 630,
+        alt: "Ractysh Infra Project Portfolio",
+      },
+    ],
+  },
 };
 
 export default async function WorksPage() {

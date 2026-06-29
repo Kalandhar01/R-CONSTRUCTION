@@ -2,12 +2,9 @@ import ConstructionFooter from "@/components/ConstructionFooter";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy | Ractysh Infra Pvt Ltd",
-  description:
-    "Learn how Ractysh Infra Pvt Ltd uses cookies on its website. Understand the types of cookies we use and how to manage them.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/cookie-policy"]);
 
 const sections = [
   {

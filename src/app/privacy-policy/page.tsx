@@ -2,12 +2,9 @@ import ConstructionFooter from "@/components/ConstructionFooter";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Ractysh Infra Pvt Ltd",
-  description:
-    "Read the Privacy Policy of Ractysh Infra Pvt Ltd. Learn how we collect, use, and protect your personal information.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/privacy-policy"]);
 
 const sections = [
   {

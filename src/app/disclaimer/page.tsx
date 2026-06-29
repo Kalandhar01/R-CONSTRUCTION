@@ -2,12 +2,9 @@ import ConstructionFooter from "@/components/ConstructionFooter";
 import ConstructionNavbar from "@/components/ConstructionNavbar";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Disclaimer | Ractysh Infra Pvt Ltd",
-  description:
-    "Read the Disclaimer of Ractysh Infra Pvt Ltd regarding the use of our website, content, and services.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/disclaimer"]);
 
 const sections = [
   {
