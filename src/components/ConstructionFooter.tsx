@@ -100,7 +100,7 @@ export default function ConstructionFooter() {
             </div>
           </div>
           <div className="mt-6 text-neutral-500">
-            &copy; 2025 RACTYSH Group
+            &copy; 2025 RACTYSH GROUP. All Rights Reserved.
           </div>
         </div>
 
