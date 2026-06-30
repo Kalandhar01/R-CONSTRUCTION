@@ -37,6 +37,11 @@ const navItems = [
     homeLink: "#contact",
     pageLink: "/#contact",
   },
+  {
+    name: "RACTYSH",
+    homeLink: "https://www.ractysh.com/",
+    pageLink: "https://www.ractysh.com/",
+  },
 ];
 
 export default function ConstructionNavbar() {
