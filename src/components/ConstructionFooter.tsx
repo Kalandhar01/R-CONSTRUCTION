@@ -13,6 +13,7 @@ const footerColumns = [
       { title: "Projects", href: "/works" },
       { title: "Consultation", href: "#contact" },
       { title: "Careers", href: "#contact" },
+      { title: "RACTYSH Group", href: "https://www.ractysh.com/" },
     ],
   },
   {
