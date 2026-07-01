@@ -100,7 +100,7 @@ const services: Service[] = [
     title: "Turnkey Construction Projects",
     description: "Single-point accountability from concept to handover — design, procurement, construction, commissioning, and documentation managed end-to-end.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-site-command-07.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
     highlights: [
       "Design-build project delivery",
       "Procurement & vendor management",
@@ -134,7 +134,7 @@ const services: Service[] = [
     title: "MEP Engineering Works",
     description: "Integrated mechanical, electrical, and plumbing systems — design, installation, commissioning, and BMS integration for energy-efficient buildings.",
     cta: "Explore Service",
-    image: "/images/construction/service-plumbing-water-management.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
     highlights: [
       "HVAC system design & installation",
       "Electrical power distribution & lighting",
@@ -168,7 +168,7 @@ const services: Service[] = [
     title: "Project Management Consultancy (PMC)",
     description: "Independent owner-representative oversight — planning, budgeting, scheduling, risk management, vendor coordination, and quality assurance.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-site-command-07.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
     highlights: [
       "Project planning & scheduling",
       "Budget & cost control",
@@ -202,7 +202,7 @@ const services: Service[] = [
     title: "Mega Structure Projects & Infrastructure Development",
     description: "Large-scale delivery for industrial campuses, infrastructure corridors, and master-planned developments with advanced program management.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-industrial-campus-13.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "Industrial campus development",
       "Infrastructure corridor projects",
@@ -219,7 +219,7 @@ const services: Service[] = [
     title: "Building Renovation & Modernization",
     description: "Structural retrofitting, façade upgrades, MEP modernisation, and interior remodelling — extending building life and meeting current standards.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-commercial-office-10.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "Structural strengthening & retrofitting",
       "Building façade & envelope upgrades",
@@ -236,7 +236,7 @@ const services: Service[] = [
     title: "Interior Fit-Out & Execution Works",
     description: "Design-driven interiors for offices, retail, hospitality, and residences — blending aesthetics with functional space planning.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-luxury-interior-11.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "Office & corporate interiors",
       "Retail & hospitality fit-outs",
@@ -253,7 +253,7 @@ const services: Service[] = [
     title: "Landscape Construction Works",
     description: "Hardscapes, softscapes, garden development, irrigation systems, outdoor lighting, and site furnishings for all project types.",
     cta: "Explore Service",
-    image: "/images/construction/service-building-materials.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
     highlights: [
       "Hardscape & softscape development",
       "Garden & irrigation systems",
@@ -270,7 +270,7 @@ const services: Service[] = [
     title: "Land & Building Survey Works",
     description: "Topographic surveys, boundary demarcation, GPS positioning, drone surveying, and as-built documentation for accurate baselines.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-handover-lobby-06.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
     highlights: [
       "Topographic & boundary surveys",
       "GPS & drone surveying",
@@ -287,7 +287,7 @@ const services: Service[] = [
     title: "Soil Testing & Geotechnical Investigation",
     description: "Borehole drilling, soil sampling, laboratory testing, bearing capacity analysis, and foundation recommendations for site conditions.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-infra-viaduct-05.webp",
+    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
     highlights: [
       "Borehole drilling & soil sampling",
       "Laboratory soil testing",
@@ -304,7 +304,7 @@ const services: Service[] = [
     title: "Building Stability Testing & Structural Assessment",
     description: "Load capacity analysis, seismic vulnerability assessment, non-destructive testing, and condition surveys for existing structures.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-commercial-office-10.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "Structural load capacity analysis",
       "Seismic vulnerability assessment",
@@ -321,7 +321,7 @@ const services: Service[] = [
     title: "Labour Contract Services",
     description: "Skilled and semi-skilled workforce — masons, carpenters, steel fixers, plumbers, electricians, and supervisors with compliance management.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-row-houses-12.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "Skilled workforce supply",
       "Compliance & payroll management",
@@ -338,7 +338,7 @@ const services: Service[] = [
     title: "Turf Construction & Sports Infrastructure",
     description: "Synthetic and natural turf, courts, athletic tracks, playgrounds, and multi-sport facilities for educational and recreational use.",
     cta: "Explore Service",
-    image: "/images/construction/service-turf-sports.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
     highlights: [
       "Synthetic & natural turf fields",
       "Basketball & tennis courts",
@@ -355,7 +355,7 @@ const services: Service[] = [
     title: "Electrical Engineering Works",
     description: "HT and LT power distribution, lighting design, earthing systems, backup power, and electrical safety systems for all building types.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-apartment-09.webp",
+    image: "/images/construction/our-work-finished-villa-08.webp",
     highlights: [
       "HT/LT power distribution",
       "Lighting design & controls",
@@ -372,7 +372,7 @@ const services: Service[] = [
     title: "Plumbing & Water Management Systems",
     description: "Water supply, drainage networks, sewage treatment, rainwater harvesting, and fire-fighting plumbing for all project types.",
     cta: "Explore Service",
-    image: "/images/construction/service-plumbing-water-management.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
     highlights: [
       "Water supply & distribution",
       "Drainage & sewage systems",
@@ -389,7 +389,7 @@ const services: Service[] = [
     title: "Swimming Pool Construction",
     description: "Structural design, waterproofing, filtration systems, tiling, decking, and safety features for residential, commercial, and hospitality pools.",
     cta: "Explore Service",
-    image: "/images/construction/service-swimming-pool.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
     highlights: [
       "Structural pool design & construction",
       "Filtration & circulation systems",
@@ -406,7 +406,7 @@ const services: Service[] = [
     title: "Lift & Elevator Execution Services",
     description: "Design, procurement, installation, testing, and maintenance of passenger elevators, service lifts, and escalators.",
     cta: "Explore Service",
-    image: "/images/construction/service-lift-elevator.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
     highlights: [
       "Passenger & service elevators",
       "Escalators & moving walkways",
@@ -423,7 +423,7 @@ const services: Service[] = [
     title: "Painting & Finishing Works",
     description: "Interior and exterior painting, putty, texture finishes, waterproof coatings, and industrial-grade paint systems.",
     cta: "Explore Service",
-    image: "/images/construction/service-painting-finishing.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
     highlights: [
       "Interior painting & textures",
       "Exterior & waterproof coatings",
@@ -440,7 +440,7 @@ const services: Service[] = [
     title: "Tiles & Stone Installation Works",
     description: "Ceramic, porcelain, vitrified, granite, marble, and engineered stone installation for floors, walls, cladding, and features.",
     cta: "Explore Service",
-    image: "/images/construction/service-tiles-stone.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
     highlights: [
       "Floor & wall tiling",
       "Natural stone & marble installation",
@@ -457,7 +457,7 @@ const services: Service[] = [
     title: "Building Material & Product Sourcing",
     description: "Cement, steel, aggregate, specialised finishes, MEP equipment, and fixtures — sourced with quality assurance and competitive pricing.",
     cta: "Explore Service",
-    image: "/images/construction/service-building-materials.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
     highlights: [
       "Cement, steel & aggregate supply",
       "Finishing materials & specialties",
