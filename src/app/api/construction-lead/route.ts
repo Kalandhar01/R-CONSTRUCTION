@@ -84,7 +84,30 @@ ${message ? `<div style="margin:0 0 30px;padding:24px;border:1px solid #E7E2D9;b
 </table></td></tr></table></body></html>`
 }
 
-function renderAutoReplyHtml(name: string): string {
+function renderAutoReplyHtml(payload: Record<string, unknown>): string {
+  const name = payload.fullName as string
+  const fields = [
+    ["Name", payload.fullName as string],
+    ["Email", payload.email as string],
+    ["Phone", display(payload.phone as string)],
+    ["Services", (payload.selectedServices as string[])?.join(", ") || "Not specified"],
+    ["Project Type", display(payload.projectType as string)],
+    ["Location", display(payload.projectLocation as string)],
+    ["Budget Range", display(payload.budgetRange as string)],
+    ["Timeline", display(payload.timeline as string)],
+  ]
+
+  const fieldRows = fields
+    .filter(([_, v]) => v && v !== "Not provided" && v !== "Not specified")
+    .map(([label, value]) => `
+    <tr><td style="padding:6px 0;font-size:14px;line-height:20px;color:#62584e;border-bottom:1px solid #f0ebe2">
+      <span style="font-weight:600;color:#20130f;display:inline-block;width:120px">${escapeHtml(label)}</span>
+      <span style="color:#4a3f35">${escapeHtml(value)}</span>
+    </td></tr>`)
+    .join("")
+
+  const message = payload.message as string | undefined
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thank You — RACTYSH Construction</title></head>
@@ -102,6 +125,16 @@ function renderAutoReplyHtml(name: string): string {
 <tr><td style="font-size:28px;font-weight:700;color:#20130f;padding-bottom:8px;font-family:Georgia,'Times New Roman',serif">Thank You, ${escapeHtml(name)}</td></tr>
 <tr><td style="height:3px;width:48px;background-color:#d9bd7a;margin:0 0 24px;display:block"></td></tr>
 <tr><td style="font-size:16px;line-height:26px;color:#62584e;padding-bottom:16px">We have received your inquiry. A member of our construction team will reach out within <strong style="color:#20130f">24–48 business hours</strong>.</td></tr>
+<tr><td><table cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="padding:16px 0 8px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a47a2d;font-family:Arial,sans-serif">Your Submission Details</td></tr>
+${fieldRows}
+</table></td></tr>
+${message ? `<tr><td style="padding:16px 0 0">
+<div style="padding:16px;border-left:3px solid #a47a2d;background:#fcf9f4;border-radius:8px">
+<p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a47a2d;font-family:Arial,sans-serif">Your Message</p>
+<p style="margin:0;font-size:14px;line-height:22px;color:#4a3f35">${escapeHtml(message)}</p>
+</div>
+</td></tr>` : ""}
 </table></td></tr>
 <tr><td style="background:linear-gradient(135deg,#0a0806,#1c120e);border-radius:0 0 12px 12px;padding:24px 40px;text-align:center">
 <p style="font-size:12px;line-height:18px;color:#9d8a74;margin:0;font-family:Arial,Helvetica,sans-serif">RACTYSH GROUP — CONSTRUCTION DIVISION</p>
@@ -171,7 +204,7 @@ export async function POST(request: Request) {
           from: fromEmail,
           to: payload.email,
           subject: `Thank You, ${payload.fullName} — RACTYSH Construction`,
-          html: renderAutoReplyHtml(payload.fullName),
+          html: renderAutoReplyHtml({ ...payload }),
         }),
         signal: AbortSignal.timeout(8_000),
       }).catch((err) => console.error("[construction-lead] Auto-reply failed:", err))

@@ -134,7 +134,7 @@ const services: Service[] = [
     title: "MEP Engineering Works",
     description: "Integrated mechanical, electrical, and plumbing systems — design, installation, commissioning, and BMS integration for energy-efficient buildings.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
+    image: "/images/construction/service-mep-hvac.webp",
     highlights: [
       "HVAC system design & installation",
       "Electrical power distribution & lighting",
@@ -151,7 +151,7 @@ const services: Service[] = [
     title: "Pre-Engineered Building (PEB) Structures",
     description: "Design, fabrication, and erection of steel buildings for industrial sheds, warehouses, and large-span commercial structures.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
+    image: "/images/construction/service-steel-structure.webp",
     highlights: [
       "Industrial sheds & factories",
       "Warehouses & logistics hubs",
@@ -168,7 +168,7 @@ const services: Service[] = [
     title: "Project Management Consultancy (PMC)",
     description: "Independent owner-representative oversight — planning, budgeting, scheduling, risk management, vendor coordination, and quality assurance.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
+    image: "/images/construction/service-construction-workers.webp",
     highlights: [
       "Project planning & scheduling",
       "Budget & cost control",
@@ -202,7 +202,7 @@ const services: Service[] = [
     title: "Mega Structure Projects & Infrastructure Development",
     description: "Large-scale delivery for industrial campuses, infrastructure corridors, and master-planned developments with advanced program management.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-villa-08.webp",
+    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
     highlights: [
       "Industrial campus development",
       "Infrastructure corridor projects",
@@ -219,7 +219,7 @@ const services: Service[] = [
     title: "Building Renovation & Modernization",
     description: "Structural retrofitting, façade upgrades, MEP modernisation, and interior remodelling — extending building life and meeting current standards.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-villa-08.webp",
+    image: "/images/construction/service-interior-renovation.webp",
     highlights: [
       "Structural strengthening & retrofitting",
       "Building façade & envelope upgrades",
@@ -236,7 +236,7 @@ const services: Service[] = [
     title: "Interior Fit-Out & Execution Works",
     description: "Design-driven interiors for offices, retail, hospitality, and residences — blending aesthetics with functional space planning.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-villa-08.webp",
+    image: "/images/construction/service-painting.webp",
     highlights: [
       "Office & corporate interiors",
       "Retail & hospitality fit-outs",
@@ -270,7 +270,7 @@ const services: Service[] = [
     title: "Land & Building Survey Works",
     description: "Topographic surveys, boundary demarcation, GPS positioning, drone surveying, and as-built documentation for accurate baselines.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
+    image: "/images/construction/service-survey-equipment.webp",
     highlights: [
       "Topographic & boundary surveys",
       "GPS & drone surveying",
@@ -287,7 +287,7 @@ const services: Service[] = [
     title: "Soil Testing & Geotechnical Investigation",
     description: "Borehole drilling, soil sampling, laboratory testing, bearing capacity analysis, and foundation recommendations for site conditions.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-premium-tower-dawn-04.webp",
+    image: "/images/construction/service-soil-geotechnical.webp",
     highlights: [
       "Borehole drilling & soil sampling",
       "Laboratory soil testing",
@@ -338,7 +338,7 @@ const services: Service[] = [
     title: "Turf Construction & Sports Infrastructure",
     description: "Synthetic and natural turf, courts, athletic tracks, playgrounds, and multi-sport facilities for educational and recreational use.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
+    image: "/images/construction/service-sports-turf.webp",
     highlights: [
       "Synthetic & natural turf fields",
       "Basketball & tennis courts",
@@ -355,7 +355,7 @@ const services: Service[] = [
     title: "Electrical Engineering Works",
     description: "HT and LT power distribution, lighting design, earthing systems, backup power, and electrical safety systems for all building types.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-villa-08.webp",
+    image: "/images/construction/service-electrical.webp",
     highlights: [
       "HT/LT power distribution",
       "Lighting design & controls",
@@ -372,7 +372,7 @@ const services: Service[] = [
     title: "Plumbing & Water Management Systems",
     description: "Water supply, drainage networks, sewage treatment, rainwater harvesting, and fire-fighting plumbing for all project types.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-infrastructure-viaduct-03.webp",
+    image: "/images/construction/service-plumbing.webp",
     highlights: [
       "Water supply & distribution",
       "Drainage & sewage systems",
@@ -406,7 +406,7 @@ const services: Service[] = [
     title: "Lift & Elevator Execution Services",
     description: "Design, procurement, installation, testing, and maintenance of passenger elevators, service lifts, and escalators.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
+    image: "/images/construction/service-lift-elevator.webp",
     highlights: [
       "Passenger & service elevators",
       "Escalators & moving walkways",
