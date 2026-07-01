@@ -99,6 +99,7 @@ export default function ConstructionFooter() {
               </p>
             </div>
           </div>
+
           <div className="mt-6 text-neutral-500">
             &copy; 2025 <Link href="https://www.ractysh.com/" className="hover:text-neutral-200 transition-colors">RACTYSH GROUP</Link>. All Rights Reserved.
           </div>

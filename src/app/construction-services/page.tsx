@@ -321,7 +321,7 @@ const services: Service[] = [
     title: "Labour Contract Services",
     description: "Skilled and semi-skilled workforce — masons, carpenters, steel fixers, plumbers, electricians, and supervisors with compliance management.",
     cta: "Explore Service",
-    image: "/images/construction/our-work-finished-villa-08.webp",
+    image: "/images/construction/service-labour-contract.webp",
     highlights: [
       "Skilled workforce supply",
       "Compliance & payroll management",
@@ -423,7 +423,7 @@ const services: Service[] = [
     title: "Painting & Finishing Works",
     description: "Interior and exterior painting, putty, texture finishes, waterproof coatings, and industrial-grade paint systems.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-rebar-deck-02.webp",
+    image: "/images/construction/service-painting.webp",
     highlights: [
       "Interior painting & textures",
       "Exterior & waterproof coatings",
@@ -440,7 +440,7 @@ const services: Service[] = [
     title: "Tiles & Stone Installation Works",
     description: "Ceramic, porcelain, vitrified, granite, marble, and engineered stone installation for floors, walls, cladding, and features.",
     cta: "Explore Service",
-    image: "/images/construction/construction-service-command-center-construction-india-commercial-tower-01.webp",
+    image: "/images/construction/service-tiles-stone.webp",
     highlights: [
       "Floor & wall tiling",
       "Natural stone & marble installation",

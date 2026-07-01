@@ -33,14 +33,14 @@ const navItems = [
     pageLink: "/works",
   },
   {
+    name: "Founder",
+    homeLink: "/founder",
+    pageLink: "/founder",
+  },
+  {
     name: "Contact",
     homeLink: "#contact",
     pageLink: "/#contact",
-  },
-  {
-    name: "RACTYSH",
-    homeLink: "https://www.ractysh.com/",
-    pageLink: "https://www.ractysh.com/",
   },
 ];
 
